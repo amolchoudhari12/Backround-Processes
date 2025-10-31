@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="73049e39-c88b-4ab5-b47c-94654e8f70ea" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vilani-pc/Vilani.Services.QA/PublicServices.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PublicServices.wsdl" MetadataType="Wsdl" ID="539649fc-f8ea-4153-85a7-f0e3b70f3548" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PublicServices.svc?wsdl" />
+    <MetadataFile FileName="PublicServices.disco" MetadataType="Disco" ID="fcffb194-24c8-45a8-8cf6-73a470c627f9" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PublicServices.svc?disco" />
+    <MetadataFile FileName="PublicServices.xsd" MetadataType="Schema" ID="ea5d5d06-91e9-40ed-99e9-f64d12717490" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PublicServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="PublicServices1.xsd" MetadataType="Schema" ID="80ca8671-60d1-4900-bbe4-ca9f917b2a9e" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PublicServices.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+
+  <!-- DEV Connection Strings-->
+  <connectionStrings>
+    <add name="PlottingConnectionString" connectionString="server=192.168.2.20;database=vilanimartdev;User Id=vilani;password=password;"/>
+    <add name="RealEstateConnectionString" connectionString="server=192.168.2.20;database=vilanimartdev;User Id=vilani;password=password;"/>
+
+  </connectionStrings>
+
+  D:\VilaniRepositary\Technical\SourceCode\branches\trunk\VilaniWinService\Vilani.BackroundService\Vilani.LanguageTranslators\App.config
+
+
+  <startup>
+    <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5" />
+  </startup>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="BasicHttpBinding_LanguageService" />
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://api.microsofttranslator.com/V2/soap.svc" binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_LanguageService" contract="BingTranslatorService.LanguageService" name="BasicHttpBinding_LanguageService" />
+    </client>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior>
+          <!-- To avoid disclosing metadata information, set the value below to false and remove the metadata endpoint above before deployment -->
+          <serviceMetadata httpGetEnabled="true" />
+          <!-- To receive exception details in faults for debugging purposes, set the value below to true.  Set to false before deployment to avoid disclosing exception information -->
+          <serviceDebug includeExceptionDetailInFaults="false" />
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <serviceHostingEnvironment multipleSiteBindingsEnabled="true" />
+  </system.serviceModel>
+</configuration>

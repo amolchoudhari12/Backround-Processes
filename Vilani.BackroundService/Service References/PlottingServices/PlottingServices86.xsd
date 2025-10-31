@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Vilani" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Vilani" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Vilani.Common.Enumarations" />
+  <xs:complexType name="XMLNodeTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CMSTitleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListOfChilds" nillable="true" type="tns:ArrayOfXMLNodeChildsDTO" />
+      <xs:element minOccurs="0" name="PlottingCMSContentID" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusMessage" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="XMLNodeOwnerID" type="xs:int" />
+      <xs:element minOccurs="0" name="XMLNodeTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XMLNodeTypeDTO" nillable="true" type="tns:XMLNodeTypeDTO" />
+  <xs:complexType name="ArrayOfXMLNodeChildsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XMLNodeChildsDTO" nillable="true" type="tns:XMLNodeChildsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXMLNodeChildsDTO" nillable="true" type="tns:ArrayOfXMLNodeChildsDTO" />
+  <xs:complexType name="XMLNodeChildsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CMSTitleName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="NodeValues" nillable="true" type="q1:ArrayOfstring" />
+      <xs:element minOccurs="0" name="ParentID" type="xs:int" />
+      <xs:element minOccurs="0" name="XMLNodeChildID" type="xs:int" />
+      <xs:element minOccurs="0" name="XMLNodeTypeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="XMLNodeChildsDTO" nillable="true" type="tns:XMLNodeChildsDTO" />
+  <xs:complexType name="ArrayOfXMLNodeTypeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="XMLNodeTypeDTO" nillable="true" type="tns:XMLNodeTypeDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfXMLNodeTypeDTO" nillable="true" type="tns:ArrayOfXMLNodeTypeDTO" />
+  <xs:complexType name="RealEstateImageDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BedRooms" type="xs:decimal" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Vilani.Common.Enumarations" minOccurs="0" name="ImageCategory" type="q2:DBImageCategory" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Vilani.Common.Enumarations" minOccurs="0" name="ImageType" type="q3:ImageType" />
+      <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      <xs:element minOccurs="0" name="LocalAreaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingSchemeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProjectID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProjectName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PropertyID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RealEstateImageDetails" nillable="true" type="tns:RealEstateImageDetails" />
+</xs:schema>

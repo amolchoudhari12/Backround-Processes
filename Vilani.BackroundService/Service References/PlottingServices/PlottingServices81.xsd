@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Common" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Common" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfPropertyContactPersonDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PropertyContactPersonDTO" nillable="true" type="tns:PropertyContactPersonDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPropertyContactPersonDTO" nillable="true" type="tns:ArrayOfPropertyContactPersonDTO" />
+  <xs:complexType name="PropertyContactPersonDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactPersonID" type="xs:int" />
+      <xs:element minOccurs="0" name="ContactPersonName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ContactPersonTranslateID" type="xs:int" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeveloperID" type="xs:int" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FullName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      <xs:element minOccurs="0" name="Mobile1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mobile2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Phone1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Phone2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PropertyID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PropertyContactPersonDTO" nillable="true" type="tns:PropertyContactPersonDTO" />
+  <xs:complexType name="ArrayOfReportResultDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReportResultDTO" nillable="true" type="tns:ReportResultDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReportResultDTO" nillable="true" type="tns:ArrayOfReportResultDTO" />
+  <xs:complexType name="ReportResultDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="GroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Key" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Value" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReportResultDTO" nillable="true" type="tns:ReportResultDTO" />
+</xs:schema>

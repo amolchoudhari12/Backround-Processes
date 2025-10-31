@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="106a83de-ce7e-4921-b1fd-d9fe08198caf" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PlottingServices8.xsd" MetadataType="Schema" ID="b574c9ae-f616-4aa6-9500-02e648c231ea" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd9" />
+    <MetadataFile FileName="PlottingServices81.xsd" MetadataType="Schema" ID="180effd5-3004-4e7c-89eb-d104a0c4b586" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd8" />
+    <MetadataFile FileName="PlottingServices1.wsdl" MetadataType="Wsdl" ID="d26d96ca-5398-4928-98c0-32fcfa94b69c" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?wsdl" />
+    <MetadataFile FileName="PlottingServices82.xsd" MetadataType="Schema" ID="c38058df-c105-4aec-a2eb-589a83ae5abc" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd1" />
+    <MetadataFile FileName="PlottingServices83.xsd" MetadataType="Schema" ID="f928f924-d1cb-45d9-9ab8-794f3edf50da" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="PlottingServices84.xsd" MetadataType="Schema" ID="8f5f4906-6baf-47bb-8740-f0c6e05c2f15" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd3" />
+    <MetadataFile FileName="PlottingServices85.xsd" MetadataType="Schema" ID="a83c92e8-a764-4d1f-9f2b-6c1ff9346887" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="PlottingServices86.xsd" MetadataType="Schema" ID="0ac8dc10-afba-4454-bdee-7936decdc63b" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd5" />
+    <MetadataFile FileName="PlottingServices87.xsd" MetadataType="Schema" ID="1fc20c9d-b7ed-4784-a228-ee01f901e4f3" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd4" />
+    <MetadataFile FileName="PlottingServices88.xsd" MetadataType="Schema" ID="1b47d9f7-d423-417d-94be-5275095be98e" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd7" />
+    <MetadataFile FileName="PlottingServices89.xsd" MetadataType="Schema" ID="9aa06ec5-c8a1-44a4-bed1-d8656cc0c568" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd6" />
+    <MetadataFile FileName="PlottingServices1.disco" MetadataType="Disco" ID="85a5a4ee-145c-496d-be56-3368718aff54" SourceId="1" SourceUrl="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

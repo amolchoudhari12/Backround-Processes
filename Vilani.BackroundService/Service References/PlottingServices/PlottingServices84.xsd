@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" />
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Common" />
+  <xs:complexType name="PlottingSchemeDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AboutScheme" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AmountPaidByDuration" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="BookingAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeveloperID" type="xs:int" />
+      <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      <xs:element minOccurs="0" name="ListingTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="LocalAreaID" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="MasterPlanImage" nillable="true" type="q1:ImageDTO" />
+      <xs:element minOccurs="0" name="PackageTypeID" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="PlotImages" nillable="true" type="q2:ArrayOfImageDTO" />
+      <xs:element minOccurs="0" name="PlottingAddressID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingStatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingTypeID" type="xs:short" />
+      <xs:element minOccurs="0" name="PropertyID" type="xs:int" />
+      <xs:element minOccurs="0" name="SchemeDeveloperName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SchemeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlottingSchemeDTO" nillable="true" type="tns:PlottingSchemeDTO" />
+  <xs:complexType name="PlottingSizeGroupDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AreaMap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ColourCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FromArea" type="xs:double" />
+      <xs:element minOccurs="0" name="MeasurementUnitID" type="xs:short" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhaseGroupNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingPhaseGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+      <xs:element minOccurs="0" name="ToArea" type="xs:double" />
+      <xs:element minOccurs="0" name="XMLImageMap" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlottingSizeGroupDTO" nillable="true" type="tns:PlottingSizeGroupDTO" />
+  <xs:complexType name="ArrayOfPlottingSizeGroupDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlottingSizeGroupDTO" nillable="true" type="tns:PlottingSizeGroupDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlottingSizeGroupDTO" nillable="true" type="tns:ArrayOfPlottingSizeGroupDTO" />
+  <xs:complexType name="PlottingPriceGroupDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ColourCode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrencyID" nillable="true" type="xs:short" />
+      <xs:element minOccurs="0" name="DeletedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FromPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlottingPhaseGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingPriceGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+      <xs:element minOccurs="0" name="ToPrice" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlottingPriceGroupDTO" nillable="true" type="tns:PlottingPriceGroupDTO" />
+  <xs:complexType name="ArrayOfPlottingPriceGroupDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlottingPriceGroupDTO" nillable="true" type="tns:PlottingPriceGroupDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlottingPriceGroupDTO" nillable="true" type="tns:ArrayOfPlottingPriceGroupDTO" />
+  <xs:complexType name="IndividualPlotDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualArea" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="AreaMap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeletedOn" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="FromLeft" type="xs:double" />
+      <xs:element minOccurs="0" name="FromTop" type="xs:double" />
+      <xs:element minOccurs="0" name="GroupID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndividualPlotID" type="xs:int" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:double" />
+      <xs:element minOccurs="0" name="PlotIndetifier" type="xs:int" />
+      <xs:element minOccurs="0" name="PlotNumber" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingPhaseGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingPriceGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingStatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingTypeID" type="xs:short" />
+      <xs:element minOccurs="0" name="Price" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="SEOId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEOUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IndividualPlotDTO" nillable="true" type="tns:IndividualPlotDTO" />
+  <xs:complexType name="ArrayOfIndividualPlotDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="IndividualPlotDTO" nillable="true" type="tns:IndividualPlotDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfIndividualPlotDTO" nillable="true" type="tns:ArrayOfIndividualPlotDTO" />
+  <xs:complexType name="PlottingSchemeHightlightsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BankLoanAvailable" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BunglowPlots" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ClearTitle" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ConcreteRoads" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ConstructionHelp" type="xs:boolean" />
+      <xs:element minOccurs="0" name="DambariRoads" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NaturalPlace" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PropertyID" type="xs:int" />
+      <xs:element minOccurs="0" name="SchemeHightlightID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlottingSchemeHightlightsDTO" nillable="true" type="tns:PlottingSchemeHightlightsDTO" />
+  <xs:complexType name="ArrayOfPlottingStatusDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlottingStatusDTO" nillable="true" type="tns:PlottingStatusDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlottingStatusDTO" nillable="true" type="tns:ArrayOfPlottingStatusDTO" />
+  <xs:complexType name="PlottingStatusDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="PlotNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingStatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="StatusName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlottingStatusDTO" nillable="true" type="tns:PlottingStatusDTO" />
+  <xs:complexType name="ArrayOfPlotSchemeOverviewDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlotSchemeOverviewDTO" nillable="true" type="tns:PlotSchemeOverviewDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlotSchemeOverviewDTO" nillable="true" type="tns:ArrayOfPlotSchemeOverviewDTO" />
+  <xs:complexType name="PlotSchemeOverviewDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AboutScheme" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AddressLanagugeID" type="xs:int" />
+      <xs:element minOccurs="0" name="AddressLine" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Common" minOccurs="0" name="ContactList" nillable="true" type="q3:ArrayOfPropertyContactPersonDTO" />
+      <xs:element minOccurs="0" name="DeveloperID" type="xs:int" />
+      <xs:element minOccurs="0" name="DeveloperName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      <xs:element minOccurs="0" name="LocalAreaName" nillable="true" type="xs:string" />
+      <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="MatserPlanImage" nillable="true" type="q4:ShowImageDTO" />
+      <xs:element minOccurs="0" name="MaximumArea" type="xs:double" />
+      <xs:element minOccurs="0" name="MaximumPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="MinimumArea" type="xs:double" />
+      <xs:element minOccurs="0" name="MinimumPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="MyProperty" type="xs:int" />
+      <xs:element minOccurs="0" name="NearestLandmark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PropertyID" type="xs:int" />
+      <xs:element minOccurs="0" name="SchemeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StreetName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UnitNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlotSchemeOverviewDTO" nillable="true" type="tns:PlotSchemeOverviewDTO" />
+  <xs:complexType name="FilterPlotsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      <xs:element minOccurs="0" name="LocalAreaID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MaxArea" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="MaxBudget" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="MinArea" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="MinBudget" nillable="true" type="xs:double" />
+      <xs:element minOccurs="0" name="PlottingTypeID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="FilterPlotsDTO" nillable="true" type="tns:FilterPlotsDTO" />
+  <xs:complexType name="ArrayOfUniquePlotDetailsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="UniquePlotDetailsDTO" nillable="true" type="tns:UniquePlotDetailsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfUniquePlotDetailsDTO" nillable="true" type="tns:ArrayOfUniquePlotDetailsDTO" />
+  <xs:complexType name="UniquePlotDetailsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualArea" type="xs:double" />
+      <xs:element minOccurs="0" name="AreaMap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BookingAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeveloperID" type="xs:int" />
+      <xs:element minOccurs="0" name="IndividualPlotID" type="xs:int" />
+      <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      <xs:element minOccurs="0" name="LocalAreaID" type="xs:int" />
+      <xs:element minOccurs="0" name="LocalAreaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterImagePropertyID" type="xs:int" />
+      <xs:element minOccurs="0" name="MasterPlanImageID" type="xs:int" />
+      <xs:element minOccurs="0" name="MasterPlanImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterPlanThumnailImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MeasurementUnitID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhaseGroupNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PlotNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingPhaseGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingPriceGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="PropertyID" type="xs:int" />
+      <xs:element minOccurs="0" name="SEOId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEOUrl" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="UniquePlotDetailsDTO" nillable="true" type="tns:UniquePlotDetailsDTO" />
+  <xs:complexType name="IndividualPlotDetailsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualArea" type="xs:double" />
+      <xs:element minOccurs="0" name="AreaMap" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="CurrencyID" type="xs:int" />
+      <xs:element minOccurs="0" name="FromArea" type="xs:double" />
+      <xs:element minOccurs="0" name="FromLeft" type="xs:int" />
+      <xs:element minOccurs="0" name="FromPrice" type="xs:double" />
+      <xs:element minOccurs="0" name="FromTop" type="xs:int" />
+      <xs:element minOccurs="0" name="IndividualPlotID" type="xs:int" />
+      <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+      <xs:element minOccurs="0" name="LocalAreaName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Longitude" type="xs:double" />
+      <xs:element minOccurs="0" name="MasterImagePropertyID" type="xs:int" />
+      <xs:element minOccurs="0" name="MasterPlanImageID" type="xs:int" />
+      <xs:element minOccurs="0" name="MasterPlanImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MasterPlanThumnailImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MeasurementUnitID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PhaseGroupNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PlotNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PlotOwnerID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingPhaseGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingPriceGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingStatusID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingTypeID" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+      <xs:element minOccurs="0" name="PropertyID" type="xs:int" />
+      <xs:element minOccurs="0" name="SEOId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SEOUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ToArea" type="xs:double" />
+      <xs:element minOccurs="0" name="ToPrice" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="IndividualPlotDetailsDTO" nillable="true" type="tns:IndividualPlotDetailsDTO" />
+  <xs:complexType name="PlotOwnerDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FirstName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndividualPlotID" type="xs:int" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Mobile" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlotOwnerID" type="xs:int" />
+      <xs:element minOccurs="0" name="ProfileImageURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ProfilePhoto" nillable="true" type="xs:base64Binary" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlotOwnerDTO" nillable="true" type="tns:PlotOwnerDTO" />
+  <xs:complexType name="PlotPaymentDetailsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountPaying" type="xs:double" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="IndividualPlotID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Note" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PaymentDetailsID" type="xs:int" />
+      <xs:element minOccurs="0" name="PaymentMethodID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlotNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PlotOwnerID" type="xs:int" />
+      <xs:element minOccurs="0" name="RemainingAmount" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalAmountToPaid" type="xs:double" />
+      <xs:element minOccurs="0" name="TotalPaidAmount" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlotPaymentDetailsDTO" nillable="true" type="tns:PlotPaymentDetailsDTO" />
+  <xs:complexType name="ArrayOfPlotPaymentHistoryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlotPaymentHistoryDTO" nillable="true" type="tns:PlotPaymentHistoryDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlotPaymentHistoryDTO" nillable="true" type="tns:ArrayOfPlotPaymentHistoryDTO" />
+  <xs:complexType name="PlotPaymentHistoryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmountPaid" type="xs:double" />
+      <xs:element minOccurs="0" name="CreatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeletedOn" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="PaymentDetailsID" type="xs:int" />
+      <xs:element minOccurs="0" name="PaymentHistoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="PaymentMethodID" type="xs:short" />
+      <xs:element minOccurs="0" name="PlotOwnerID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlotPaymentHistoryDTO" nillable="true" type="tns:PlotPaymentHistoryDTO" />
+  <xs:complexType name="ArrayOfPlotAreaMapDetailsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="PlotAreaMapDetailsDTO" nillable="true" type="tns:PlotAreaMapDetailsDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPlotAreaMapDetailsDTO" nillable="true" type="tns:ArrayOfPlotAreaMapDetailsDTO" />
+  <xs:complexType name="PlotAreaMapDetailsDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AreaSize" type="xs:double" />
+      <xs:element minOccurs="0" name="Coordinates" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IndidualPlotId" type="xs:int" />
+      <xs:element minOccurs="0" name="PlotNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PlotOwner" nillable="true" type="tns:PlotOwnerDTO" />
+      <xs:element minOccurs="0" name="PlotPaymentDetailsDTO" nillable="true" type="tns:PlotPaymentDetailsDTO" />
+      <xs:element minOccurs="0" name="PlotStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="Price" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlotAreaMapDetailsDTO" nillable="true" type="tns:PlotAreaMapDetailsDTO" />
+  <xs:complexType name="StatusHistoryReportDTO">
+    <xs:sequence>
+      <xs:element name="_x003C_AvilablePlots_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_InProcessPlots_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_PhaseName_x003E_k__BackingField" nillable="true" type="xs:string" />
+      <xs:element name="_x003C_PhaseNumber_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_PlottingPhaseGroupID_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_PlottingSchemeID_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_SoldPlots_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_StatusDate_x003E_k__BackingField" type="xs:dateTime" />
+      <xs:element name="_x003C_StatusHistoryID_x003E_k__BackingField" type="xs:int" />
+      <xs:element name="_x003C_StatusHistoryRecords_x003E_k__BackingField" nillable="true" type="xs:base64Binary" />
+      <xs:element name="_x003C_TotalPlots_x003E_k__BackingField" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StatusHistoryReportDTO" nillable="true" type="tns:StatusHistoryReportDTO" />
+  <xs:complexType name="ArrayOfStatusHistoryReportDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StatusHistoryReportDTO" nillable="true" type="tns:StatusHistoryReportDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStatusHistoryReportDTO" nillable="true" type="tns:ArrayOfStatusHistoryReportDTO" />
+  <xs:complexType name="DurationInputDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ChildID" type="xs:int" />
+      <xs:element minOccurs="0" name="ParentID" type="xs:int" />
+      <xs:element minOccurs="0" name="Year" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DurationInputDTO" nillable="true" type="tns:DurationInputDTO" />
+  <xs:complexType name="ArrayOfMarketingCostReportDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MarketingCostReportDTO" nillable="true" type="tns:MarketingCostReportDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMarketingCostReportDTO" nillable="true" type="tns:ArrayOfMarketingCostReportDTO" />
+  <xs:complexType name="MarketingCostReportDTO">
+    <xs:sequence>
+      <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Common" minOccurs="0" name="MarketingCostResult" nillable="true" type="q5:ArrayOfReportResultDTO" />
+      <xs:element minOccurs="0" name="PhaseGroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlottingPhaseGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MarketingCostReportDTO" nillable="true" type="tns:MarketingCostReportDTO" />
+  <xs:complexType name="PlottingEnquiriesReportDTO">
+    <xs:sequence>
+      <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Common" minOccurs="0" name="Enquiries" nillable="true" type="q6:ArrayOfReportResultDTO" />
+      <xs:element minOccurs="0" name="PhaseGroupName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlottingPhaseGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PlottingEnquiriesReportDTO" nillable="true" type="tns:PlottingEnquiriesReportDTO" />
+  <xs:complexType name="MarketingEnquiriesReportDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Enquiries" nillable="true" type="tns:PlottingEnquiriesReportDTO" />
+      <xs:element minOccurs="0" name="MarketingCosts" nillable="true" type="tns:MarketingCostReportDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MarketingEnquiriesReportDTO" nillable="true" type="tns:MarketingEnquiriesReportDTO" />
+</xs:schema>

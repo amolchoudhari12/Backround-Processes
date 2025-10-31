@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="81c24a62-d649-4659-a507-4240656a40f9" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="Vilani.BusinessEntities" />
+      <ReferencedAssembly AssemblyName="Vilani.LanguageTranslator" />
+      <ReferencedAssembly AssemblyName="Vilani.Repositary" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:3115/VilaniTranslatorServices.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="VilaniTranslatorServices.disco" MetadataType="Disco" ID="1f9bb365-a349-4496-a9fc-47e76c344f10" SourceId="1" SourceUrl="http://localhost:3115/VilaniTranslatorServices.svc?disco" />
+    <MetadataFile FileName="VilaniTranslatorServices.xsd" MetadataType="Schema" ID="6f86d35b-344f-4ca3-9987-5a0c8a758f4b" SourceId="1" SourceUrl="http://localhost:3115/VilaniTranslatorServices.svc?xsd=xsd0" />
+    <MetadataFile FileName="VilaniTranslatorServices.wsdl" MetadataType="Wsdl" ID="2b4a07ec-4018-4115-8595-609b8467c7f7" SourceId="1" SourceUrl="http://localhost:3115/VilaniTranslatorServices.svc?wsdl" />
+    <MetadataFile FileName="VilaniTranslatorServices1.xsd" MetadataType="Schema" ID="f58d7af1-8e29-4676-ba6e-9a9145be6a06" SourceId="1" SourceUrl="http://localhost:3115/VilaniTranslatorServices.svc?xsd=xsd2" />
+    <MetadataFile FileName="VilaniTranslatorServices2.xsd" MetadataType="Schema" ID="ac1929c2-1c00-43a7-a8df-8e54a4d6cc1f" SourceId="1" SourceUrl="http://localhost:3115/VilaniTranslatorServices.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

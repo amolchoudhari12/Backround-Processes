@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Web" />
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Vilani" />
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Vilani.Common.Enumarations" />
+  <xs:complexType name="PropertyAddressDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:VilaniBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AddressID" type="xs:int" />
+          <xs:element minOccurs="0" name="AddressLine" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="City" nillable="true" type="tns:LocationCityDTO" />
+          <xs:element minOccurs="0" name="CityID" type="xs:int" />
+          <xs:element minOccurs="0" name="Countries" nillable="true" type="tns:ArrayOfLocationCountryDTO" />
+          <xs:element minOccurs="0" name="Country" nillable="true" type="tns:LocationCountryDTO" />
+          <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+          <xs:element minOccurs="0" name="DeveloperID" type="xs:int" />
+          <xs:element minOccurs="0" name="Latitude" type="xs:double" />
+          <xs:element minOccurs="0" name="LocalAreaDTO" nillable="true" type="tns:LocationLocalAreaDTO" />
+          <xs:element minOccurs="0" name="LocalAreaID" type="xs:int" />
+          <xs:element minOccurs="0" name="LocalAreaName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Longitude" type="xs:double" />
+          <xs:element minOccurs="0" name="NearestLandmark" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+          <xs:element minOccurs="0" name="State" nillable="true" type="tns:LocationStateDTO" />
+          <xs:element minOccurs="0" name="StateID" type="xs:int" />
+          <xs:element minOccurs="0" name="StreetName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="UnitNumber" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ZipCode" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="PropertyAddressDTO" nillable="true" type="tns:PropertyAddressDTO" />
+  <xs:complexType name="VilaniBaseDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="LanguageID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserID" type="xs:int" />
+      <xs:element minOccurs="0" name="UserName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="VilaniBaseDTO" nillable="true" type="tns:VilaniBaseDTO" />
+  <xs:complexType name="LocationCityDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CityID" type="xs:int" />
+      <xs:element minOccurs="0" name="CityName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocationCityDTO" nillable="true" type="tns:LocationCityDTO" />
+  <xs:complexType name="ArrayOfLocationCountryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LocationCountryDTO" nillable="true" type="tns:LocationCountryDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLocationCountryDTO" nillable="true" type="tns:ArrayOfLocationCountryDTO" />
+  <xs:complexType name="LocationCountryDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+      <xs:element minOccurs="0" name="CountryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LanguageID" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocationCountryDTO" nillable="true" type="tns:LocationCountryDTO" />
+  <xs:complexType name="LocationLocalAreaDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CityID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsActive" type="xs:boolean" />
+      <xs:element minOccurs="0" name="LanguageID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="LocalAreaID" type="xs:int" />
+      <xs:element minOccurs="0" name="LocalAreaName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocationLocalAreaDTO" nillable="true" type="tns:LocationLocalAreaDTO" />
+  <xs:complexType name="LocationStateDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountryID" type="xs:int" />
+      <xs:element minOccurs="0" name="LanguageID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="StateID" type="xs:int" />
+      <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="LocationStateDTO" nillable="true" type="tns:LocationStateDTO" />
+  <xs:complexType name="ImageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ImageCategoryID" type="xs:int" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/System.Web" minOccurs="0" name="ImageFile" nillable="true" type="q1:HttpPostedFileBase" />
+      <xs:element minOccurs="0" name="ImageFilePath" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageID" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageServerPath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Is3D" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAreaMapEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsCoverImage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PropertyID" type="xs:int" />
+      <xs:element minOccurs="0" name="ThumbnailServerPath" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ImageDTO" nillable="true" type="tns:ImageDTO" />
+  <xs:complexType name="ArrayOfImageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ImageDTO" nillable="true" type="tns:ImageDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfImageDTO" nillable="true" type="tns:ArrayOfImageDTO" />
+  <xs:complexType name="AmenitiesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AmenitiesID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="BadmintonCourt" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BankATM" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BasketballCourt" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BroadbandInternet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Cafeteria" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ClubHouse" type="xs:boolean" />
+      <xs:element minOccurs="0" name="CommunityHall" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Electricity" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Garbage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Garden" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Gas" type="xs:boolean" />
+      <xs:element minOccurs="0" name="HealthFacilities" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Hour24BackUp" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IndoorGames" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Intercom" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Jim" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Library" type="xs:boolean" />
+      <xs:element minOccurs="0" name="MaintainanceStaff" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PlayGround" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+      <xs:element minOccurs="0" name="PropertyID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="RainWaterHarvesting" type="xs:boolean" />
+      <xs:element minOccurs="0" name="RecreationalFacilities" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Security" type="xs:boolean" />
+      <xs:element minOccurs="0" name="SwimmingPool" type="xs:boolean" />
+      <xs:element minOccurs="0" name="TenisCourt" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WaterSupply24" type="xs:boolean" />
+      <xs:element minOccurs="0" name="WiFi" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="AmenitiesDTO" nillable="true" type="tns:AmenitiesDTO" />
+  <xs:complexType name="CommonImageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActualImage" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="ActualThumbnailImage" nillable="true" type="xs:base64Binary" />
+      <xs:element minOccurs="0" name="AlternateImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GUID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Height" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageCategoryID" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageID" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageMapEnabled" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="ImagePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageServerURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageTag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Is3DImage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAddressMap" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsCoverImage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ModifiedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="OriginalFileName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlottingPhaseGroupID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PrimaryImageID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ProjectID" type="xs:int" />
+      <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Vilani" minOccurs="0" name="ProjectPlotPropertyDTO" nillable="true" type="q2:RealEstateImageDetails" />
+      <xs:element minOccurs="0" name="PropertyID" type="xs:int" />
+      <xs:element minOccurs="0" name="ThumbnailName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThumbnailServerURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThumbnailTag" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThumnailHeight" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="ThumnailImagePath" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThumnailImageType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThumnailTooltip" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ThumnailWidth" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Width" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CommonImageDTO" nillable="true" type="tns:CommonImageDTO" />
+  <xs:complexType name="ImageResultDTO">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:VilaniBaseDTO">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ImageName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImagePath" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="ImageTag" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="PropertyID" type="xs:int" />
+          <xs:element minOccurs="0" name="PropertyImageID" type="xs:int" />
+          <xs:element minOccurs="0" name="PropertyThumbnailID" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ImageResultDTO" nillable="true" type="tns:ImageResultDTO" />
+  <xs:complexType name="ShowImageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AlternateImageName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageID" type="xs:int" />
+      <xs:element minOccurs="0" name="ImageURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Is3DImage" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsAreaMapEnabled" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PlottingPhaseGroupID" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PropertyID" type="xs:int" />
+      <xs:element minOccurs="0" name="ThumbURL" nillable="true" type="xs:string" />
+      <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Vilani.Common.Enumarations" minOccurs="0" name="TypeOfRealEstateImage" type="q3:DBImageCategory" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ShowImageDTO" nillable="true" type="tns:ShowImageDTO" />
+  <xs:complexType name="ArrayOfShowImageDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ShowImageDTO" nillable="true" type="tns:ShowImageDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfShowImageDTO" nillable="true" type="tns:ArrayOfShowImageDTO" />
+</xs:schema>

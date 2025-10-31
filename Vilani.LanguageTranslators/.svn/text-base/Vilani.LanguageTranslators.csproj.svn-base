@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C3A69A6-F68C-48FE-9E8F-3CD99D4627C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Vilani.LanguageTranslators</RootNamespace>
+    <AssemblyName>Vilani.LanguageTranslators</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vilani.BusinessActions">
+      <HintPath>..\..\..\VilaniMart\Vilani.BusinessActions\bin\Debug\Vilani.BusinessActions.dll</HintPath>
+    </Reference>
+    <Reference Include="Vilani.BusinessEntities">
+      <HintPath>..\..\..\VilaniMart\Vilani.Services\bin\Vilani.BusinessEntities.dll</HintPath>
+    </Reference>
+    <Reference Include="Vilani.Repositary">
+      <HintPath>..\..\..\VilaniMart\Vilani.Services\bin\Vilani.Repositary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\LanguageMapper.cs" />
+    <Compile Include="DataAccessTranslate\DataAccessTranslate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\BingTranslatorService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="TableTranslators\ContactPersonTranslator.cs" />
+    <Compile Include="TableTranslators\DeveloperTranslator.cs" />
+    <Compile Include="TableTranslators\ListerTypeTranslator.cs" />
+    <Compile Include="TableTranslators\LocationAirportListTranslator.cs" />
+    <Compile Include="TableTranslators\LocationAtmListTranslator.cs" />
+    <Compile Include="TableTranslators\LocationBankListTranslator.cs" />
+    <Compile Include="TableTranslators\LocationBusStopListTranslator.cs" />
+    <Compile Include="TableTranslators\LocationHospitalListTranslator.cs" />
+    <Compile Include="TableTranslators\LocationMallListTranslator.cs" />
+    <Compile Include="TableTranslators\LocationMarketListTranslator.cs" />
+    <Compile Include="TableTranslators\LocationRailwayStationListTranslator.cs" />
+    <Compile Include="TableTranslators\LocationSchoolListTranslator.cs" />
+    <Compile Include="TableTranslators\OfficeAddressTranslator.cs" />
+    <Compile Include="TableTranslators\PlottingAddressTranslator.cs" />
+    <Compile Include="TableTranslators\PlottingSchemeTranslator.cs" />
+    <Compile Include="TableTranslators\ProjectPhaseTranslator.cs" />
+    <Compile Include="TableTranslators\ProjectTranslator.cs" />
+    <Compile Include="TableTranslators\PropertyAddressTranslator.cs" />
+    <Compile Include="TableTranslators\PropertyListerTranslator.cs" />
+    <Compile Include="TableTranslators\PropertyTranslator.cs" />
+    <Compile Include="TableTranslators\VilaniLanguageTranslatorFasade.cs" />
+    <Compile Include="VilaniaTranslatarorServiceWrapper\IVilaniTranslatorServiceWrapper.cs" />
+    <Compile Include="VilaniaTranslatarorServiceWrapper\VilaniTranalatorServiceWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="App.PROD.config" />
+    <None Include="Service References\BingTranslatorService\soap.wsdl" />
+    <None Include="Service References\BingTranslatorService\soap.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BingTranslatorService\soap1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BingTranslatorService\soap2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BingTranslatorService\soap3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\BingTranslatorService\SoapService.wsdl" />
+    <None Include="Service References\BingTranslatorService\Vilani.LanguageTranslators.BingTranslatorService.GetTranslationsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BingTranslatorService\Vilani.LanguageTranslators.BingTranslatorService.TranslateArray2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\BingTranslatorService\Vilani.LanguageTranslators.BingTranslatorService.TranslateArrayResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\BingTranslatorService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BingTranslatorService\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BingTranslatorService\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\BingTranslatorService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

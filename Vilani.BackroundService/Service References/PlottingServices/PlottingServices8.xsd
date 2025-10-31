@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.ViewModels" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.ViewModels" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfGaugePlottingSchemesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="GaugePlottingSchemesDTO" nillable="true" type="tns:GaugePlottingSchemesDTO" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfGaugePlottingSchemesDTO" nillable="true" type="tns:ArrayOfGaugePlottingSchemesDTO" />
+  <xs:complexType name="GaugePlottingSchemesDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AvilablePlots" nillable="true" type="tns:GaugeInput" />
+      <xs:element minOccurs="0" name="EnquiriesCount" nillable="true" type="tns:GaugeInput" />
+      <xs:element minOccurs="0" name="InProgressPlots" nillable="true" type="tns:GaugeInput" />
+      <xs:element minOccurs="0" name="MarketingCost" nillable="true" type="tns:GaugeInput" />
+      <xs:element minOccurs="0" name="PhaseGroupNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingPhaseGroupID" type="xs:int" />
+      <xs:element minOccurs="0" name="PlottingSchemeBrief" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PlottingSchemeID" type="xs:int" />
+      <xs:element minOccurs="0" name="SoldPlots" nillable="true" type="tns:GaugeInput" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GaugePlottingSchemesDTO" nillable="true" type="tns:GaugePlottingSchemesDTO" />
+  <xs:complexType name="GaugeInput">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="ColorSeries" nillable="true" type="q1:ArrayOfdouble" />
+      <xs:element minOccurs="0" name="CurrentValue" type="xs:int" />
+      <xs:element minOccurs="0" name="DivIdentifier" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GaugeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MaxLimit" type="xs:double" />
+      <xs:element minOccurs="0" name="MinLimit" type="xs:int" />
+      <xs:element minOccurs="0" name="MinorTicks" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="GaugeInput" nillable="true" type="tns:GaugeInput" />
+</xs:schema>

@@ -1,0 +1,1809 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="PlottingServices" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IPlottingServices_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsoma:OptimizedMimeSerialization xmlns:wsoma="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" />
+      <xsd:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" />
+      <xsd:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.Web" />
+      <xsd:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Vilani" />
+      <xsd:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/Vilani.Common.Enumarations" />
+      <xsd:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd8" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Common" />
+      <xsd:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.ViewModels" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IPlottingServices_AddPlottingAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingAddress" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingScheme_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingScheme" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingScheme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingSchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingSchemeAsProperty_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingSchemeAsProperty" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingSchemeAsProperty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingSchemeAsPropertyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingPhaseGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingPhaseGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingPhaseGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingPhaseGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingPhaseGroupList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingPhaseGroupList" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingPhaseGroupList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingPhaseGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingPriceGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingPriceGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingPriceGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingPriceGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingPriceGroupList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingPriceGroupList" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingPriceGroupList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingPriceGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddIndivitualPlot_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddIndivitualPlot" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddIndivitualPlot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddIndivitualPlotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddIndivitualPlotList_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddIndivitualPlotList" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddIndivitualPlotList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddIndivitualPlotListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_SavePlottingSchemeHighlihghts_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlottingSchemeHighlihghts" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_SavePlottingSchemeHighlihghts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlottingSchemeHighlihghtsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingStatus" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_SavePlottingAmenities_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlottingAmenities" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_SavePlottingAmenities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlottingAmenitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingSchemeIDOfProperty_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingSchemeIDOfProperty" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingSchemeIDOfProperty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingSchemeIDOfPropertyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingAddress" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingAddressBySchemeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingAddressBySchemeID" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingAddressBySchemeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingAddressBySchemeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingScheme_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingScheme" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingScheme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingSchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingPhaseGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingPhaseGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingPhaseGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingPhaseGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingPriceGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingPriceGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingPriceGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingPriceGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotsList" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotsListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingAmenities_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingAmenities" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingAmenities_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingAmenitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingSchemeHighlihghts_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingSchemeHighlihghts" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingSchemeHighlihghts_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingSchemeHighlihghtsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_SavePlottingXMLTemplateBasedData_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlottingXMLTemplateBasedData" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_SavePlottingXMLTemplateBasedData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePlottingXMLTemplateBasedDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingXMLTemplateBasedData_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingXMLTemplateBasedData" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingXMLTemplateBasedData_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingXMLTemplateBasedDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingCMSDetailsByType_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingCMSDetailsByType" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingCMSDetailsByType_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingCMSDetailsByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingSchemeCMSDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingSchemeCMSDetails" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingSchemeCMSDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingSchemeCMSDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetAllManagedPlottingSchemes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllManagedPlottingSchemes" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetAllManagedPlottingSchemes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllManagedPlottingSchemesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_IsPlotNumberExistsForSchemeAndPhaseGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsPlotNumberExistsForSchemeAndPhaseGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_IsPlotNumberExistsForSchemeAndPhaseGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsPlotNumberExistsForSchemeAndPhaseGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_IsGroupNumberExistsForScheme_InputMessage">
+    <wsdl:part name="parameters" element="tns:IsGroupNumberExistsForScheme" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_IsGroupNumberExistsForScheme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:IsGroupNumberExistsForSchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingAddress_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingAddress" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingAddress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingAddressResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingScheme_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingScheme" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingScheme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingSchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingPhaseGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingPhaseGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingPhaseGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingPhaseGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingPhaseGroupList_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingPhaseGroupList" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingPhaseGroupList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingPhaseGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingPriceGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingPriceGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingPriceGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingPriceGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingPriceGroupList_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingPriceGroupList" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingPriceGroupList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingPriceGroupListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdateIndivitualPlot_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIndivitualPlot" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdateIndivitualPlot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIndivitualPlotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdateIndivitualPlotList_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIndivitualPlotList" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdateIndivitualPlotList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateIndivitualPlotListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetServerHostingPath_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerHostingPath" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetServerHostingPath_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerHostingPathResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingMasterPlanImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingMasterPlanImage" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingMasterPlanImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingMasterPlanImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingMasterPlanImageMap_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingMasterPlanImageMap" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingMasterPlanImageMap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingMasterPlanImageMapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingMasterPlanImageMapForAllPhase_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingMasterPlanImageMapForAllPhase" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingMasterPlanImageMapForAllPhase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingMasterPlanImageMapForAllPhaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingGallaryImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingGallaryImage" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingGallaryImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingGallaryImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetImageServerURLs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageServerURLs" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetImageServerURLs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageServerURLsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetImageServerURLsForPlotsByProperty_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageServerURLsForPlotsByProperty" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetImageServerURLsForPlotsByProperty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageServerURLsForPlotsByPropertyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetImageServerURLsForPlotsByScheme_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageServerURLsForPlotsByScheme" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetImageServerURLsForPlotsByScheme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetImageServerURLsForPlotsBySchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotSchemeDetailsByProperty_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotSchemeDetailsByProperty" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotSchemeDetailsByProperty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotSchemeDetailsByPropertyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteSoftPlotMasterPlanImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSoftPlotMasterPlanImage" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteSoftPlotMasterPlanImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSoftPlotMasterPlanImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteForcePlotMasterPlanImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteForcePlotMasterPlanImage" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteForcePlotMasterPlanImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteForcePlotMasterPlanImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteSoftPlotImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSoftPlotImage" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteSoftPlotImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSoftPlotImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteForcePlotImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteForcePlotImage" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteForcePlotImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteForcePlotImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UndoSoftDeletedPlotMasterPlanImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UndoSoftDeletedPlotMasterPlanImage" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UndoSoftDeletedPlotMasterPlanImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UndoSoftDeletedPlotMasterPlanImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UndoSoftDeletedPlotImage_InputMessage">
+    <wsdl:part name="parameters" element="tns:UndoSoftDeletedPlotImage" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UndoSoftDeletedPlotImage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UndoSoftDeletedPlotImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetAllImagesOfDeveloper_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImagesOfDeveloper" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetAllImagesOfDeveloper_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllImagesOfDeveloperResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetMasterPlanAreaMapImages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMasterPlanAreaMapImages" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetMasterPlanAreaMapImages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMasterPlanAreaMapImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetMasterPlanOfPlottingScheme_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMasterPlanOfPlottingScheme" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetMasterPlanOfPlottingScheme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMasterPlanOfPlottingSchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetSoftDeletedPlottingSchemeImages_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSoftDeletedPlottingSchemeImages" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetSoftDeletedPlottingSchemeImages_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSoftDeletedPlottingSchemeImagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetAllPlottingSchemesOverView_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPlottingSchemesOverView" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetAllPlottingSchemesOverView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllPlottingSchemesOverViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingSchemeView_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingSchemeView" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingSchemeView_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingSchemeViewResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPropertyIDOfPlottingScheme_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyIDOfPlottingScheme" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPropertyIDOfPlottingScheme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyIDOfPlottingSchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotsCountInPlottingScheme_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotsCountInPlottingScheme" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotsCountInPlottingScheme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotsCountInPlottingSchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetListOfPlotsInPlottingPhaseGrop_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListOfPlotsInPlottingPhaseGrop" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetListOfPlotsInPlottingPhaseGrop_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListOfPlotsInPlottingPhaseGropResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetListOfPropertyIDsForPlottinSchemeList_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetListOfPropertyIDsForPlottinSchemeList" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetListOfPropertyIDsForPlottinSchemeList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetListOfPropertyIDsForPlottinSchemeListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_SearchIndividualPlotsByFilter_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIndividualPlotsByFilter" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_SearchIndividualPlotsByFilter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchIndividualPlotsByFilterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetIndividualPlotDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndividualPlotDetails" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetIndividualPlotDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndividualPlotDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlotOwner_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlotOwner" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlotOwner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlotOwnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlotOwner_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlotOwner" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlotOwner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlotOwnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotOwnerDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotOwnerDetails" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotOwnerDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotOwnerDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPaymentDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPaymentDetails" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPaymentDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPaymentDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPaymentHistoryOfPlotOwner_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentHistoryOfPlotOwner" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPaymentHistoryOfPlotOwner_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPaymentHistoryOfPlotOwnerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotsAreaMapDetailsForPlottingPhase_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotsAreaMapDetailsForPlottingPhase" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotsAreaMapDetailsForPlottingPhase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotsAreaMapDetailsForPlottingPhaseResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdateOwnerProfilePhoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOwnerProfilePhoto" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdateOwnerProfilePhoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateOwnerProfilePhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotOwnerProfilePhoto_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotOwnerProfilePhoto" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlotOwnerProfilePhoto_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlotOwnerProfilePhotoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetIndividualPlotByPlotId_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndividualPlotByPlotId" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetIndividualPlotByPlotId_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetIndividualPlotByPlotIdResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetTotalPaidAmountForPlotByPlotID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalPaidAmountForPlotByPlotID" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetTotalPaidAmountForPlotByPlotID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetTotalPaidAmountForPlotByPlotIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPropertyIDFromPlottingSchemeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyIDFromPlottingSchemeID" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPropertyIDFromPlottingSchemeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPropertyIDFromPlottingSchemeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingStatusHistoryRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingStatusHistoryRecord" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_AddPlottingStatusHistoryRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddPlottingStatusHistoryRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingStatusHistoryRecord_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingStatusHistoryRecord" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_UpdatePlottingStatusHistoryRecord_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdatePlottingStatusHistoryRecordResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingStatusForAllSchemes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingStatusForAllSchemes" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingStatusForAllSchemes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingStatusForAllSchemesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingStatusOfScheme_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingStatusOfScheme" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingStatusOfScheme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingStatusOfSchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingStatusBySchemeID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingStatusBySchemeID" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingStatusBySchemeID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingStatusBySchemeIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GeneratePlottingStatusReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePlottingStatusReport" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GeneratePlottingStatusReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GeneratePlottingStatusReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetGaugePlottingSchemesReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetGaugePlottingSchemesReport" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetGaugePlottingSchemesReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetGaugePlottingSchemesReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingMarketingCostReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingMarketingCostReport" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingMarketingCostReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingMarketingCostReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingMarketingCostReportByMedia_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingMarketingCostReportByMedia" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingMarketingCostReportByMedia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingMarketingCostReportByMediaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingEnquiriesReportByDuration_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingEnquiriesReportByDuration" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingEnquiriesReportByDuration_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingEnquiriesReportByDurationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingEnquiriesReportByScheme_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingEnquiriesReportByScheme" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingEnquiriesReportByScheme_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingEnquiriesReportBySchemeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingMarketingVsEnquiries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingMarketingVsEnquiries" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetPlottingMarketingVsEnquiries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPlottingMarketingVsEnquiriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteSoftPlottingPhaseGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSoftPlottingPhaseGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteSoftPlottingPhaseGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSoftPlottingPhaseGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeletePlottingPriceGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlottingPriceGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeletePlottingPriceGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeletePlottingPriceGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteForcePlottingPhaseGroup_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteForcePlottingPhaseGroup" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteForcePlottingPhaseGroup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteForcePlottingPhaseGroupResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteSoftIndividualPlot_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSoftIndividualPlot" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteSoftIndividualPlot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteSoftIndividualPlotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteForceIndividualPlot_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteForceIndividualPlot" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_DeleteForceIndividualPlot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteForceIndividualPlotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetSoftDeletedPlottingPhaseGroups_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSoftDeletedPlottingPhaseGroups" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetSoftDeletedPlottingPhaseGroups_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSoftDeletedPlottingPhaseGroupsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetSoftDeletedIndividualPlots_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSoftDeletedIndividualPlots" />
+  </wsdl:message>
+  <wsdl:message name="IPlottingServices_GetSoftDeletedIndividualPlots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSoftDeletedIndividualPlotsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IPlottingServices">
+    <wsdl:operation name="AddPlottingAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingAddress" message="tns:IPlottingServices_AddPlottingAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingAddressResponse" message="tns:IPlottingServices_AddPlottingAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingScheme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingScheme" message="tns:IPlottingServices_AddPlottingScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingSchemeResponse" message="tns:IPlottingServices_AddPlottingScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingSchemeAsProperty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingSchemeAsProperty" message="tns:IPlottingServices_AddPlottingSchemeAsProperty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingSchemeAsPropertyResponse" message="tns:IPlottingServices_AddPlottingSchemeAsProperty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingPhaseGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingPhaseGroup" message="tns:IPlottingServices_AddPlottingPhaseGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingPhaseGroupResponse" message="tns:IPlottingServices_AddPlottingPhaseGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingPhaseGroupList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingPhaseGroupList" message="tns:IPlottingServices_AddPlottingPhaseGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingPhaseGroupListResponse" message="tns:IPlottingServices_AddPlottingPhaseGroupList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingPriceGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingPriceGroup" message="tns:IPlottingServices_AddPlottingPriceGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingPriceGroupResponse" message="tns:IPlottingServices_AddPlottingPriceGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingPriceGroupList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingPriceGroupList" message="tns:IPlottingServices_AddPlottingPriceGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/AddPlottingPriceGroupListResponse" message="tns:IPlottingServices_AddPlottingPriceGroupList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddIndivitualPlot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/AddIndivitualPlot" message="tns:IPlottingServices_AddIndivitualPlot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/AddIndivitualPlotResponse" message="tns:IPlottingServices_AddIndivitualPlot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddIndivitualPlotList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/AddIndivitualPlotList" message="tns:IPlottingServices_AddIndivitualPlotList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/AddIndivitualPlotListResponse" message="tns:IPlottingServices_AddIndivitualPlotList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePlottingSchemeHighlihghts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/SavePlottingSchemeHighlihghts" message="tns:IPlottingServices_SavePlottingSchemeHighlihghts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/SavePlottingSchemeHighlihghtsResponse" message="tns:IPlottingServices_SavePlottingSchemeHighlihghts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingStatus" message="tns:IPlottingServices_GetPlottingStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingStatusResponse" message="tns:IPlottingServices_GetPlottingStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePlottingAmenities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/SavePlottingAmenities" message="tns:IPlottingServices_SavePlottingAmenities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/SavePlottingAmenitiesResponse" message="tns:IPlottingServices_SavePlottingAmenities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingSchemeIDOfProperty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingSchemeIDOfProperty" message="tns:IPlottingServices_GetPlottingSchemeIDOfProperty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingSchemeIDOfPropertyResponse" message="tns:IPlottingServices_GetPlottingSchemeIDOfProperty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingAddress" message="tns:IPlottingServices_GetPlottingAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingAddressResponse" message="tns:IPlottingServices_GetPlottingAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingAddressBySchemeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingAddressBySchemeID" message="tns:IPlottingServices_GetPlottingAddressBySchemeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingAddressBySchemeIDResponse" message="tns:IPlottingServices_GetPlottingAddressBySchemeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingScheme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingScheme" message="tns:IPlottingServices_GetPlottingScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingSchemeResponse" message="tns:IPlottingServices_GetPlottingScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingPhaseGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingPhaseGroup" message="tns:IPlottingServices_GetPlottingPhaseGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingPhaseGroupResponse" message="tns:IPlottingServices_GetPlottingPhaseGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingPriceGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingPriceGroup" message="tns:IPlottingServices_GetPlottingPriceGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingPriceGroupResponse" message="tns:IPlottingServices_GetPlottingPriceGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlotsList" message="tns:IPlottingServices_GetPlotsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlotsListResponse" message="tns:IPlottingServices_GetPlotsList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingAmenities">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingAmenities" message="tns:IPlottingServices_GetPlottingAmenities_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingAmenitiesResponse" message="tns:IPlottingServices_GetPlottingAmenities_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingSchemeHighlihghts">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingSchemeHighlihghts" message="tns:IPlottingServices_GetPlottingSchemeHighlihghts_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingSchemeHighlihghtsResponse" message="tns:IPlottingServices_GetPlottingSchemeHighlihghts_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePlottingXMLTemplateBasedData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/SavePlottingXMLTemplateBasedData" message="tns:IPlottingServices_SavePlottingXMLTemplateBasedData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/SavePlottingXMLTemplateBasedDataResponse" message="tns:IPlottingServices_SavePlottingXMLTemplateBasedData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingXMLTemplateBasedData">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/UpdatePlottingXMLTemplateBasedData" message="tns:IPlottingServices_UpdatePlottingXMLTemplateBasedData_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/UpdatePlottingXMLTemplateBasedDataResponse" message="tns:IPlottingServices_UpdatePlottingXMLTemplateBasedData_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingCMSDetailsByType">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingCMSDetailsByType" message="tns:IPlottingServices_GetPlottingCMSDetailsByType_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingCMSDetailsByTypeResponse" message="tns:IPlottingServices_GetPlottingCMSDetailsByType_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingSchemeCMSDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingSchemeCMSDetails" message="tns:IPlottingServices_GetPlottingSchemeCMSDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetPlottingSchemeCMSDetailsResponse" message="tns:IPlottingServices_GetPlottingSchemeCMSDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllManagedPlottingSchemes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/GetAllManagedPlottingSchemes" message="tns:IPlottingServices_GetAllManagedPlottingSchemes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/GetAllManagedPlottingSchemesResponse" message="tns:IPlottingServices_GetAllManagedPlottingSchemes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsPlotNumberExistsForSchemeAndPhaseGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/IsPlotNumberExistsForSchemeAndPhaseGroup" message="tns:IPlottingServices_IsPlotNumberExistsForSchemeAndPhaseGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/IsPlotNumberExistsForSchemeAndPhaseGroupResponse" message="tns:IPlottingServices_IsPlotNumberExistsForSchemeAndPhaseGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="IsGroupNumberExistsForScheme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSchemes/IsGroupNumberExistsForScheme" message="tns:IPlottingServices_IsGroupNumberExistsForScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSchemes/IsGroupNumberExistsForSchemeResponse" message="tns:IPlottingServices_IsGroupNumberExistsForScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingAddress">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingAddress" message="tns:IPlottingServices_UpdatePlottingAddress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingAddressResponse" message="tns:IPlottingServices_UpdatePlottingAddress_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingScheme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingScheme" message="tns:IPlottingServices_UpdatePlottingScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingSchemeResponse" message="tns:IPlottingServices_UpdatePlottingScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingPhaseGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingPhaseGroup" message="tns:IPlottingServices_UpdatePlottingPhaseGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingPhaseGroupResponse" message="tns:IPlottingServices_UpdatePlottingPhaseGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingPhaseGroupList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingPhaseGroupList" message="tns:IPlottingServices_UpdatePlottingPhaseGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingPhaseGroupListResponse" message="tns:IPlottingServices_UpdatePlottingPhaseGroupList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingPriceGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingPriceGroup" message="tns:IPlottingServices_UpdatePlottingPriceGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingPriceGroupResponse" message="tns:IPlottingServices_UpdatePlottingPriceGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingPriceGroupList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingPriceGroupList" message="tns:IPlottingServices_UpdatePlottingPriceGroupList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdatePlottingPriceGroupListResponse" message="tns:IPlottingServices_UpdatePlottingPriceGroupList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIndivitualPlot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdateIndivitualPlot" message="tns:IPlottingServices_UpdateIndivitualPlot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdateIndivitualPlotResponse" message="tns:IPlottingServices_UpdateIndivitualPlot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIndivitualPlotList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdateIndivitualPlotList" message="tns:IPlottingServices_UpdateIndivitualPlotList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingUpdates/UpdateIndivitualPlotListResponse" message="tns:IPlottingServices_UpdateIndivitualPlotList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerHostingPath">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/GetServerHostingPath" message="tns:IPlottingServices_GetServerHostingPath_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/GetServerHostingPathResponse" message="tns:IPlottingServices_GetServerHostingPath_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingMasterPlanImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/AddPlottingMasterPlanImage" message="tns:IPlottingServices_AddPlottingMasterPlanImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/AddPlottingMasterPlanImageResponse" message="tns:IPlottingServices_AddPlottingMasterPlanImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingMasterPlanImageMap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/AddPlottingMasterPlanImageMap" message="tns:IPlottingServices_AddPlottingMasterPlanImageMap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/AddPlottingMasterPlanImageMapResponse" message="tns:IPlottingServices_AddPlottingMasterPlanImageMap_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingMasterPlanImageMapForAllPhase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/AddPlottingMasterPlanImageMapForAllPhase" message="tns:IPlottingServices_AddPlottingMasterPlanImageMapForAllPhase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/AddPlottingMasterPlanImageMapForAllPhaseResponse" message="tns:IPlottingServices_AddPlottingMasterPlanImageMapForAllPhase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingGallaryImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/AddPlottingGallaryImage" message="tns:IPlottingServices_AddPlottingGallaryImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/AddPlottingGallaryImageResponse" message="tns:IPlottingServices_AddPlottingGallaryImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageServerURLs">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/GetImageServerURLs" message="tns:IPlottingServices_GetImageServerURLs_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/GetImageServerURLsResponse" message="tns:IPlottingServices_GetImageServerURLs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageServerURLsForPlotsByProperty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/GetImageServerURLsForPlotsByProperty" message="tns:IPlottingServices_GetImageServerURLsForPlotsByProperty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/GetImageServerURLsForPlotsByPropertyResponse" message="tns:IPlottingServices_GetImageServerURLsForPlotsByProperty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetImageServerURLsForPlotsByScheme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/GetImageServerURLsForPlotsByScheme" message="tns:IPlottingServices_GetImageServerURLsForPlotsByScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/GetImageServerURLsForPlotsBySchemeResponse" message="tns:IPlottingServices_GetImageServerURLsForPlotsByScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotSchemeDetailsByProperty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/GetPlotSchemeDetailsByProperty" message="tns:IPlottingServices_GetPlotSchemeDetailsByProperty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/GetPlotSchemeDetailsByPropertyResponse" message="tns:IPlottingServices_GetPlotSchemeDetailsByProperty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSoftPlotMasterPlanImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/DeleteSoftPlotMasterPlanImage" message="tns:IPlottingServices_DeleteSoftPlotMasterPlanImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/DeleteSoftPlotMasterPlanImageResponse" message="tns:IPlottingServices_DeleteSoftPlotMasterPlanImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForcePlotMasterPlanImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/DeleteForcePlotMasterPlanImage" message="tns:IPlottingServices_DeleteForcePlotMasterPlanImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/DeleteForcePlotMasterPlanImageResponse" message="tns:IPlottingServices_DeleteForcePlotMasterPlanImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSoftPlotImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/DeleteSoftPlotImage" message="tns:IPlottingServices_DeleteSoftPlotImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/DeleteSoftPlotImageResponse" message="tns:IPlottingServices_DeleteSoftPlotImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForcePlotImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/DeleteForcePlotImage" message="tns:IPlottingServices_DeleteForcePlotImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/DeleteForcePlotImageResponse" message="tns:IPlottingServices_DeleteForcePlotImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UndoSoftDeletedPlotMasterPlanImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/UndoSoftDeletedPlotMasterPlanImage" message="tns:IPlottingServices_UndoSoftDeletedPlotMasterPlanImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/UndoSoftDeletedPlotMasterPlanImageResponse" message="tns:IPlottingServices_UndoSoftDeletedPlotMasterPlanImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UndoSoftDeletedPlotImage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/UndoSoftDeletedPlotImage" message="tns:IPlottingServices_UndoSoftDeletedPlotImage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/UndoSoftDeletedPlotImageResponse" message="tns:IPlottingServices_UndoSoftDeletedPlotImage_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImagesOfDeveloper">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/GetAllImagesOfDeveloper" message="tns:IPlottingServices_GetAllImagesOfDeveloper_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/GetAllImagesOfDeveloperResponse" message="tns:IPlottingServices_GetAllImagesOfDeveloper_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterPlanAreaMapImages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/GetMasterPlanAreaMapImages" message="tns:IPlottingServices_GetMasterPlanAreaMapImages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/GetMasterPlanAreaMapImagesResponse" message="tns:IPlottingServices_GetMasterPlanAreaMapImages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterPlanOfPlottingScheme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/GetMasterPlanOfPlottingScheme" message="tns:IPlottingServices_GetMasterPlanOfPlottingScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/GetMasterPlanOfPlottingSchemeResponse" message="tns:IPlottingServices_GetMasterPlanOfPlottingScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftDeletedPlottingSchemeImages">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingImages/GetSoftDeletedPlottingSchemeImages" message="tns:IPlottingServices_GetSoftDeletedPlottingSchemeImages_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingImages/GetSoftDeletedPlottingSchemeImagesResponse" message="tns:IPlottingServices_GetSoftDeletedPlottingSchemeImages_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlottingSchemesOverView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSearch/GetAllPlottingSchemesOverView" message="tns:IPlottingServices_GetAllPlottingSchemesOverView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSearch/GetAllPlottingSchemesOverViewResponse" message="tns:IPlottingServices_GetAllPlottingSchemesOverView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingSchemeView">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSearch/GetPlottingSchemeView" message="tns:IPlottingServices_GetPlottingSchemeView_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSearch/GetPlottingSchemeViewResponse" message="tns:IPlottingServices_GetPlottingSchemeView_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyIDOfPlottingScheme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSearch/GetPropertyIDOfPlottingScheme" message="tns:IPlottingServices_GetPropertyIDOfPlottingScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSearch/GetPropertyIDOfPlottingSchemeResponse" message="tns:IPlottingServices_GetPropertyIDOfPlottingScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotsCountInPlottingScheme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSearch/GetPlotsCountInPlottingScheme" message="tns:IPlottingServices_GetPlotsCountInPlottingScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSearch/GetPlotsCountInPlottingSchemeResponse" message="tns:IPlottingServices_GetPlotsCountInPlottingScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfPlotsInPlottingPhaseGrop">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSearch/GetListOfPlotsInPlottingPhaseGrop" message="tns:IPlottingServices_GetListOfPlotsInPlottingPhaseGrop_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSearch/GetListOfPlotsInPlottingPhaseGropResponse" message="tns:IPlottingServices_GetListOfPlotsInPlottingPhaseGrop_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfPropertyIDsForPlottinSchemeList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSearch/GetListOfPropertyIDsForPlottinSchemeList" message="tns:IPlottingServices_GetListOfPropertyIDsForPlottinSchemeList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSearch/GetListOfPropertyIDsForPlottinSchemeListResponse" message="tns:IPlottingServices_GetListOfPropertyIDsForPlottinSchemeList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchIndividualPlotsByFilter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSearch/SearchIndividualPlotsByFilter" message="tns:IPlottingServices_SearchIndividualPlotsByFilter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSearch/SearchIndividualPlotsByFilterResponse" message="tns:IPlottingServices_SearchIndividualPlotsByFilter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndividualPlotDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingSearch/GetIndividualPlotDetails" message="tns:IPlottingServices_GetIndividualPlotDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingSearch/GetIndividualPlotDetailsResponse" message="tns:IPlottingServices_GetIndividualPlotDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlotOwner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManagePlots/AddPlotOwner" message="tns:IPlottingServices_AddPlotOwner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManagePlots/AddPlotOwnerResponse" message="tns:IPlottingServices_AddPlotOwner_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlotOwner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManagePlots/UpdatePlotOwner" message="tns:IPlottingServices_UpdatePlotOwner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManagePlots/UpdatePlotOwnerResponse" message="tns:IPlottingServices_UpdatePlotOwner_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotOwnerDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManagePlots/GetPlotOwnerDetails" message="tns:IPlottingServices_GetPlotOwnerDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManagePlots/GetPlotOwnerDetailsResponse" message="tns:IPlottingServices_GetPlotOwnerDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPaymentDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManagePlots/AddPaymentDetails" message="tns:IPlottingServices_AddPaymentDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManagePlots/AddPaymentDetailsResponse" message="tns:IPlottingServices_AddPaymentDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentHistoryOfPlotOwner">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManagePlots/GetPaymentHistoryOfPlotOwner" message="tns:IPlottingServices_GetPaymentHistoryOfPlotOwner_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManagePlots/GetPaymentHistoryOfPlotOwnerResponse" message="tns:IPlottingServices_GetPaymentHistoryOfPlotOwner_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotsAreaMapDetailsForPlottingPhase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManagePlots/GetPlotsAreaMapDetailsForPlottingPhase" message="tns:IPlottingServices_GetPlotsAreaMapDetailsForPlottingPhase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManagePlots/GetPlotsAreaMapDetailsForPlottingPhaseResponse" message="tns:IPlottingServices_GetPlotsAreaMapDetailsForPlottingPhase_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOwnerProfilePhoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManagePlots/UpdateOwnerProfilePhoto" message="tns:IPlottingServices_UpdateOwnerProfilePhoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManagePlots/UpdateOwnerProfilePhotoResponse" message="tns:IPlottingServices_UpdateOwnerProfilePhoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotOwnerProfilePhoto">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManagePlots/GetPlotOwnerProfilePhoto" message="tns:IPlottingServices_GetPlotOwnerProfilePhoto_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManagePlots/GetPlotOwnerProfilePhotoResponse" message="tns:IPlottingServices_GetPlotOwnerProfilePhoto_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetIndividualPlotByPlotId">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManagePlots/GetIndividualPlotByPlotId" message="tns:IPlottingServices_GetIndividualPlotByPlotId_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManagePlots/GetIndividualPlotByPlotIdResponse" message="tns:IPlottingServices_GetIndividualPlotByPlotId_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalPaidAmountForPlotByPlotID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManagePlots/GetTotalPaidAmountForPlotByPlotID" message="tns:IPlottingServices_GetTotalPaidAmountForPlotByPlotID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManagePlots/GetTotalPaidAmountForPlotByPlotIDResponse" message="tns:IPlottingServices_GetTotalPaidAmountForPlotByPlotID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyIDFromPlottingSchemeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IManagePlots/GetPropertyIDFromPlottingSchemeID" message="tns:IPlottingServices_GetPropertyIDFromPlottingSchemeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IManagePlots/GetPropertyIDFromPlottingSchemeIDResponse" message="tns:IPlottingServices_GetPropertyIDFromPlottingSchemeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingStatusHistoryRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/AddPlottingStatusHistoryRecord" message="tns:IPlottingServices_AddPlottingStatusHistoryRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/AddPlottingStatusHistoryRecordResponse" message="tns:IPlottingServices_AddPlottingStatusHistoryRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingStatusHistoryRecord">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/UpdatePlottingStatusHistoryRecord" message="tns:IPlottingServices_UpdatePlottingStatusHistoryRecord_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/UpdatePlottingStatusHistoryRecordResponse" message="tns:IPlottingServices_UpdatePlottingStatusHistoryRecord_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingStatusForAllSchemes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingStatusForAllSchemes" message="tns:IPlottingServices_GetPlottingStatusForAllSchemes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingStatusForAllSchemesResponse" message="tns:IPlottingServices_GetPlottingStatusForAllSchemes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingStatusOfScheme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingStatusOfScheme" message="tns:IPlottingServices_GetPlottingStatusOfScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingStatusOfSchemeResponse" message="tns:IPlottingServices_GetPlottingStatusOfScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingStatusBySchemeID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingStatusBySchemeID" message="tns:IPlottingServices_GetPlottingStatusBySchemeID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingStatusBySchemeIDResponse" message="tns:IPlottingServices_GetPlottingStatusBySchemeID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePlottingStatusReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/GeneratePlottingStatusReport" message="tns:IPlottingServices_GeneratePlottingStatusReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/GeneratePlottingStatusReportResponse" message="tns:IPlottingServices_GeneratePlottingStatusReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetGaugePlottingSchemesReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/GetGaugePlottingSchemesReport" message="tns:IPlottingServices_GetGaugePlottingSchemesReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/GetGaugePlottingSchemesReportResponse" message="tns:IPlottingServices_GetGaugePlottingSchemesReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingMarketingCostReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingMarketingCostReport" message="tns:IPlottingServices_GetPlottingMarketingCostReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingMarketingCostReportResponse" message="tns:IPlottingServices_GetPlottingMarketingCostReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingMarketingCostReportByMedia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingMarketingCostReportByMedia" message="tns:IPlottingServices_GetPlottingMarketingCostReportByMedia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingMarketingCostReportByMediaResponse" message="tns:IPlottingServices_GetPlottingMarketingCostReportByMedia_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingEnquiriesReportByDuration">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingEnquiriesReportByDuration" message="tns:IPlottingServices_GetPlottingEnquiriesReportByDuration_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingEnquiriesReportByDurationResponse" message="tns:IPlottingServices_GetPlottingEnquiriesReportByDuration_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingEnquiriesReportByScheme">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingEnquiriesReportByScheme" message="tns:IPlottingServices_GetPlottingEnquiriesReportByScheme_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingEnquiriesReportBySchemeResponse" message="tns:IPlottingServices_GetPlottingEnquiriesReportByScheme_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingMarketingVsEnquiries">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingMarketingVsEnquiries" message="tns:IPlottingServices_GetPlottingMarketingVsEnquiries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingReports/GetPlottingMarketingVsEnquiriesResponse" message="tns:IPlottingServices_GetPlottingMarketingVsEnquiries_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSoftPlottingPhaseGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingDeletes/DeleteSoftPlottingPhaseGroup" message="tns:IPlottingServices_DeleteSoftPlottingPhaseGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingDeletes/DeleteSoftPlottingPhaseGroupResponse" message="tns:IPlottingServices_DeleteSoftPlottingPhaseGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlottingPriceGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingDeletes/DeletePlottingPriceGroup" message="tns:IPlottingServices_DeletePlottingPriceGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingDeletes/DeletePlottingPriceGroupResponse" message="tns:IPlottingServices_DeletePlottingPriceGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForcePlottingPhaseGroup">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingDeletes/DeleteForcePlottingPhaseGroup" message="tns:IPlottingServices_DeleteForcePlottingPhaseGroup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingDeletes/DeleteForcePlottingPhaseGroupResponse" message="tns:IPlottingServices_DeleteForcePlottingPhaseGroup_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSoftIndividualPlot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingDeletes/DeleteSoftIndividualPlot" message="tns:IPlottingServices_DeleteSoftIndividualPlot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingDeletes/DeleteSoftIndividualPlotResponse" message="tns:IPlottingServices_DeleteSoftIndividualPlot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForceIndividualPlot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingDeletes/DeleteForceIndividualPlot" message="tns:IPlottingServices_DeleteForceIndividualPlot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingDeletes/DeleteForceIndividualPlotResponse" message="tns:IPlottingServices_DeleteForceIndividualPlot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftDeletedPlottingPhaseGroups">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingDeletes/GetSoftDeletedPlottingPhaseGroups" message="tns:IPlottingServices_GetSoftDeletedPlottingPhaseGroups_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingDeletes/GetSoftDeletedPlottingPhaseGroupsResponse" message="tns:IPlottingServices_GetSoftDeletedPlottingPhaseGroups_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftDeletedIndividualPlots">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPlottingDeletes/GetSoftDeletedIndividualPlots" message="tns:IPlottingServices_GetSoftDeletedIndividualPlots_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPlottingDeletes/GetSoftDeletedIndividualPlotsResponse" message="tns:IPlottingServices_GetSoftDeletedIndividualPlots_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IPlottingServices" type="tns:IPlottingServices">
+    <wsp:PolicyReference URI="#WSHttpBinding_IPlottingServices_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddPlottingAddress">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/AddPlottingAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingScheme">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/AddPlottingScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingSchemeAsProperty">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/AddPlottingSchemeAsProperty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingPhaseGroup">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/AddPlottingPhaseGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingPhaseGroupList">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/AddPlottingPhaseGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingPriceGroup">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/AddPlottingPriceGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingPriceGroupList">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/AddPlottingPriceGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddIndivitualPlot">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/AddIndivitualPlot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddIndivitualPlotList">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/AddIndivitualPlotList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePlottingSchemeHighlihghts">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/SavePlottingSchemeHighlihghts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingStatus">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlottingStatus" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePlottingAmenities">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/SavePlottingAmenities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingSchemeIDOfProperty">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlottingSchemeIDOfProperty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingAddress">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlottingAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingAddressBySchemeID">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlottingAddressBySchemeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingScheme">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlottingScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingPhaseGroup">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlottingPhaseGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingPriceGroup">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlottingPriceGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotsList">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlotsList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingAmenities">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlottingAmenities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingSchemeHighlihghts">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlottingSchemeHighlihghts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePlottingXMLTemplateBasedData">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/SavePlottingXMLTemplateBasedData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingXMLTemplateBasedData">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/UpdatePlottingXMLTemplateBasedData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingCMSDetailsByType">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlottingCMSDetailsByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingSchemeCMSDetails">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetPlottingSchemeCMSDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllManagedPlottingSchemes">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/GetAllManagedPlottingSchemes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsPlotNumberExistsForSchemeAndPhaseGroup">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/IsPlotNumberExistsForSchemeAndPhaseGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsGroupNumberExistsForScheme">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSchemes/IsGroupNumberExistsForScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingAddress">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingUpdates/UpdatePlottingAddress" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingScheme">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingUpdates/UpdatePlottingScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingPhaseGroup">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingUpdates/UpdatePlottingPhaseGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingPhaseGroupList">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingUpdates/UpdatePlottingPhaseGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingPriceGroup">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingUpdates/UpdatePlottingPriceGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingPriceGroupList">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingUpdates/UpdatePlottingPriceGroupList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIndivitualPlot">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingUpdates/UpdateIndivitualPlot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateIndivitualPlotList">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingUpdates/UpdateIndivitualPlotList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerHostingPath">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/GetServerHostingPath" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingMasterPlanImage">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/AddPlottingMasterPlanImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingMasterPlanImageMap">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/AddPlottingMasterPlanImageMap" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingMasterPlanImageMapForAllPhase">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/AddPlottingMasterPlanImageMapForAllPhase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingGallaryImage">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/AddPlottingGallaryImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageServerURLs">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/GetImageServerURLs" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageServerURLsForPlotsByProperty">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/GetImageServerURLsForPlotsByProperty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetImageServerURLsForPlotsByScheme">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/GetImageServerURLsForPlotsByScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotSchemeDetailsByProperty">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/GetPlotSchemeDetailsByProperty" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSoftPlotMasterPlanImage">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/DeleteSoftPlotMasterPlanImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForcePlotMasterPlanImage">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/DeleteForcePlotMasterPlanImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSoftPlotImage">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/DeleteSoftPlotImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForcePlotImage">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/DeleteForcePlotImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UndoSoftDeletedPlotMasterPlanImage">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/UndoSoftDeletedPlotMasterPlanImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UndoSoftDeletedPlotImage">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/UndoSoftDeletedPlotImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllImagesOfDeveloper">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/GetAllImagesOfDeveloper" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterPlanAreaMapImages">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/GetMasterPlanAreaMapImages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterPlanOfPlottingScheme">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/GetMasterPlanOfPlottingScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftDeletedPlottingSchemeImages">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingImages/GetSoftDeletedPlottingSchemeImages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllPlottingSchemesOverView">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSearch/GetAllPlottingSchemesOverView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingSchemeView">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSearch/GetPlottingSchemeView" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyIDOfPlottingScheme">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSearch/GetPropertyIDOfPlottingScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotsCountInPlottingScheme">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSearch/GetPlotsCountInPlottingScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfPlotsInPlottingPhaseGrop">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSearch/GetListOfPlotsInPlottingPhaseGrop" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListOfPropertyIDsForPlottinSchemeList">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSearch/GetListOfPropertyIDsForPlottinSchemeList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchIndividualPlotsByFilter">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSearch/SearchIndividualPlotsByFilter" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndividualPlotDetails">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingSearch/GetIndividualPlotDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlotOwner">
+      <soap12:operation soapAction="http://tempuri.org/IManagePlots/AddPlotOwner" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlotOwner">
+      <soap12:operation soapAction="http://tempuri.org/IManagePlots/UpdatePlotOwner" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotOwnerDetails">
+      <soap12:operation soapAction="http://tempuri.org/IManagePlots/GetPlotOwnerDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPaymentDetails">
+      <soap12:operation soapAction="http://tempuri.org/IManagePlots/AddPaymentDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPaymentHistoryOfPlotOwner">
+      <soap12:operation soapAction="http://tempuri.org/IManagePlots/GetPaymentHistoryOfPlotOwner" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotsAreaMapDetailsForPlottingPhase">
+      <soap12:operation soapAction="http://tempuri.org/IManagePlots/GetPlotsAreaMapDetailsForPlottingPhase" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateOwnerProfilePhoto">
+      <soap12:operation soapAction="http://tempuri.org/IManagePlots/UpdateOwnerProfilePhoto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlotOwnerProfilePhoto">
+      <soap12:operation soapAction="http://tempuri.org/IManagePlots/GetPlotOwnerProfilePhoto" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetIndividualPlotByPlotId">
+      <soap12:operation soapAction="http://tempuri.org/IManagePlots/GetIndividualPlotByPlotId" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTotalPaidAmountForPlotByPlotID">
+      <soap12:operation soapAction="http://tempuri.org/IManagePlots/GetTotalPaidAmountForPlotByPlotID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPropertyIDFromPlottingSchemeID">
+      <soap12:operation soapAction="http://tempuri.org/IManagePlots/GetPropertyIDFromPlottingSchemeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddPlottingStatusHistoryRecord">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/AddPlottingStatusHistoryRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdatePlottingStatusHistoryRecord">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/UpdatePlottingStatusHistoryRecord" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingStatusForAllSchemes">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/GetPlottingStatusForAllSchemes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingStatusOfScheme">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/GetPlottingStatusOfScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingStatusBySchemeID">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/GetPlottingStatusBySchemeID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GeneratePlottingStatusReport">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/GeneratePlottingStatusReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetGaugePlottingSchemesReport">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/GetGaugePlottingSchemesReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingMarketingCostReport">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/GetPlottingMarketingCostReport" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingMarketingCostReportByMedia">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/GetPlottingMarketingCostReportByMedia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingEnquiriesReportByDuration">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/GetPlottingEnquiriesReportByDuration" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingEnquiriesReportByScheme">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/GetPlottingEnquiriesReportByScheme" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPlottingMarketingVsEnquiries">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingReports/GetPlottingMarketingVsEnquiries" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSoftPlottingPhaseGroup">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingDeletes/DeleteSoftPlottingPhaseGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeletePlottingPriceGroup">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingDeletes/DeletePlottingPriceGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForcePlottingPhaseGroup">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingDeletes/DeleteForcePlottingPhaseGroup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteSoftIndividualPlot">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingDeletes/DeleteSoftIndividualPlot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteForceIndividualPlot">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingDeletes/DeleteForceIndividualPlot" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftDeletedPlottingPhaseGroups">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingDeletes/GetSoftDeletedPlottingPhaseGroups" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSoftDeletedIndividualPlots">
+      <soap12:operation soapAction="http://tempuri.org/IPlottingDeletes/GetSoftDeletedIndividualPlots" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PlottingServices">
+    <wsdl:port name="WSHttpBinding_IPlottingServices" binding="tns:WSHttpBinding_IPlottingServices">
+      <soap12:address location="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://vilani-pc/Vilani.Services.QA/PlottingServices.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

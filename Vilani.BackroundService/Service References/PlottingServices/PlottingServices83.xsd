@@ -1,0 +1,1320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" />
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" />
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Vilani" />
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://vilani-pc/Vilani.Services.QA/PlottingServices.svc?xsd=xsd9" namespace="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.ViewModels" />
+  <xs:element name="AddPlottingAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="plottingAddressDTO" nillable="true" type="q1:PropertyAddressDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPlottingAddressResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingScheme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingSchemeDTO" nillable="true" type="q2:PlottingSchemeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingSchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPlottingSchemeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingSchemeAsProperty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingSchemeDTO" nillable="true" type="q3:PlottingSchemeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingSchemeAsPropertyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPlottingSchemeAsPropertyResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingPhaseGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingSizeGroupDTO" nillable="true" type="q4:PlottingSizeGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingPhaseGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPlottingPhaseGroupResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingPhaseGroupList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingSizeGroupDTOList" nillable="true" type="q5:ArrayOfPlottingSizeGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingPhaseGroupListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPlottingPhaseGroupListResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingPriceGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingPriceGroupDTO" nillable="true" type="q6:PlottingPriceGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingPriceGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPlottingPriceGroupResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingPriceGroupList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingPriceGroupDTOList" nillable="true" type="q7:ArrayOfPlottingPriceGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingPriceGroupListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPlottingPriceGroupListResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddIndivitualPlot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="individualPlotDTO" nillable="true" type="q8:IndividualPlotDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddIndivitualPlotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddIndivitualPlotResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddIndivitualPlotList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="individualPlotDTOList" nillable="true" type="q9:ArrayOfIndividualPlotDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddIndivitualPlotListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="AddIndivitualPlotListResult" nillable="true" type="q10:ArrayOfIndividualPlotDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePlottingSchemeHighlihghts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingSchemeHighlightDTO" nillable="true" type="q11:PlottingSchemeHightlightsDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePlottingSchemeHighlihghtsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePlottingSchemeHighlihghtsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingStatus">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingStatusResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingStatusResult" nillable="true" type="q12:ArrayOfPlottingStatusDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePlottingAmenities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="amenitiesDTO" nillable="true" type="q13:AmenitiesDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePlottingAmenitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePlottingAmenitiesResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingSchemeIDOfProperty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="propertyID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingSchemeIDOfPropertyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPlottingSchemeIDOfPropertyResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingAddressID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="GetPlottingAddressResult" nillable="true" type="q14:PropertyAddressDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingAddressBySchemeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingAddressBySchemeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="GetPlottingAddressBySchemeIDResult" nillable="true" type="q15:PropertyAddressDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingScheme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingSchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingSchemeResult" nillable="true" type="q16:PlottingSchemeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingPhaseGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingPhaseGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingPhaseGroupResult" nillable="true" type="q17:ArrayOfPlottingSizeGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingPriceGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingPriceGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingPriceGroupResult" nillable="true" type="q18:ArrayOfPlottingPriceGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotsList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="priceGroupID" type="xs:int" />
+        <xs:element minOccurs="0" name="sizeGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlotsListResult" nillable="true" type="q19:ArrayOfIndividualPlotDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingAmenities">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingAmenitiesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="GetPlottingAmenitiesResult" nillable="true" type="q20:AmenitiesDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingSchemeHighlihghts">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingSchemeHighlihghtsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingSchemeHighlihghtsResult" nillable="true" type="q21:PlottingSchemeHightlightsDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePlottingXMLTemplateBasedData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Vilani" minOccurs="0" name="xMLNodeTypeDTO" nillable="true" type="q22:XMLNodeTypeDTO" />
+        <xs:element minOccurs="0" name="propertyID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePlottingXMLTemplateBasedDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SavePlottingXMLTemplateBasedDataResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingXMLTemplateBasedData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Vilani" minOccurs="0" name="xMLNodeTypeDTO" nillable="true" type="q23:XMLNodeTypeDTO" />
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+        <xs:element minOccurs="0" name="propertyID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingXMLTemplateBasedDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePlottingXMLTemplateBasedDataResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingCMSDetailsByType">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="xmlNodeTypeID" type="xs:int" />
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingCMSDetailsByTypeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Vilani" minOccurs="0" name="GetPlottingCMSDetailsByTypeResult" nillable="true" type="q24:XMLNodeTypeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingSchemeCMSDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingSchemeCMSDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Vilani" minOccurs="0" name="GetPlottingSchemeCMSDetailsResult" nillable="true" type="q25:ArrayOfXMLNodeTypeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllManagedPlottingSchemes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllManagedPlottingSchemesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="GetAllManagedPlottingSchemesResult" nillable="true" type="q26:ArrayOfint" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPlotNumberExistsForSchemeAndPhaseGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plotNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="plotPhaseGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsPlotNumberExistsForSchemeAndPhaseGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsPlotNumberExistsForSchemeAndPhaseGroupResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsGroupNumberExistsForScheme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="groupNumber" type="xs:int" />
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="IsGroupNumberExistsForSchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="IsGroupNumberExistsForSchemeResult" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingAddress">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="plottingAddressDTO" nillable="true" type="q27:PropertyAddressDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingAddressResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePlottingAddressResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingScheme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingSchemeDTO" nillable="true" type="q28:PlottingSchemeDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingSchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePlottingSchemeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingPhaseGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingSizeGroupDTO" nillable="true" type="q29:PlottingSizeGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingPhaseGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePlottingPhaseGroupResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingPhaseGroupList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingSizeGroupDTOList" nillable="true" type="q30:ArrayOfPlottingSizeGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingPhaseGroupListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePlottingPhaseGroupListResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingPriceGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingPriceGroupDTO" nillable="true" type="q31:PlottingPriceGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingPriceGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePlottingPriceGroupResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingPriceGroupList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plottingPriceGroupDTOList" nillable="true" type="q32:ArrayOfPlottingPriceGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingPriceGroupListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePlottingPriceGroupListResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIndivitualPlot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="individualPlotDTO" nillable="true" type="q33:IndividualPlotDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIndivitualPlotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateIndivitualPlotResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIndivitualPlotList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="individualPlotDTOList" nillable="true" type="q34:ArrayOfIndividualPlotDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateIndivitualPlotListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateIndivitualPlotListResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerHostingPath">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="forImage" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imageType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetServerHostingPathResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetServerHostingPathResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingMasterPlanImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="masterPlanImageDTO" nillable="true" type="q35:CommonImageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingMasterPlanImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="AddPlottingMasterPlanImageResult" nillable="true" type="q36:ImageResultDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingMasterPlanImageMap">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="masterPlanImageDTO" nillable="true" type="q37:CommonImageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingMasterPlanImageMapResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="AddPlottingMasterPlanImageMapResult" nillable="true" type="q38:ImageResultDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingMasterPlanImageMapForAllPhase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="masterPlanImageDTO" nillable="true" type="q39:CommonImageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingMasterPlanImageMapForAllPhaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="AddPlottingMasterPlanImageMapForAllPhaseResult" nillable="true" type="q40:ImageResultDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingGallaryImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="gallaryImageDTO" nillable="true" type="q41:CommonImageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingGallaryImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="AddPlottingGallaryImageResult" nillable="true" type="q42:ImageResultDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageServerURLs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="guid" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="imageType" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageServerURLsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="GetImageServerURLsResult" nillable="true" type="q43:ShowImageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageServerURLsForPlotsByProperty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="propertyID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageServerURLsForPlotsByPropertyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="GetImageServerURLsForPlotsByPropertyResult" nillable="true" type="q44:ArrayOfShowImageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageServerURLsForPlotsByScheme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetImageServerURLsForPlotsBySchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="GetImageServerURLsForPlotsBySchemeResult" nillable="true" type="q45:ArrayOfShowImageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotSchemeDetailsByProperty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="propertyID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotSchemeDetailsByPropertyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Vilani" minOccurs="0" name="GetPlotSchemeDetailsByPropertyResult" nillable="true" type="q46:RealEstateImageDetails" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSoftPlotMasterPlanImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="imageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSoftPlotMasterPlanImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSoftPlotMasterPlanImageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteForcePlotMasterPlanImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="imageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteForcePlotMasterPlanImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteForcePlotMasterPlanImageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSoftPlotImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="imageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSoftPlotImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSoftPlotImageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteForcePlotImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="imageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteForcePlotImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteForcePlotImageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoSoftDeletedPlotMasterPlanImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="imageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoSoftDeletedPlotMasterPlanImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UndoSoftDeletedPlotMasterPlanImageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoSoftDeletedPlotImage">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="imageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UndoSoftDeletedPlotImageResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UndoSoftDeletedPlotImageResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllImagesOfDeveloper">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="developerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllImagesOfDeveloperResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q47="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="GetAllImagesOfDeveloperResult" nillable="true" type="q47:ArrayOfShowImageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMasterPlanAreaMapImages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMasterPlanAreaMapImagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q48="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="GetMasterPlanAreaMapImagesResult" nillable="true" type="q48:ArrayOfShowImageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMasterPlanOfPlottingScheme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMasterPlanOfPlottingSchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q49="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="GetMasterPlanOfPlottingSchemeResult" nillable="true" type="q49:ShowImageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoftDeletedPlottingSchemeImages">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoftDeletedPlottingSchemeImagesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q50="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.RealEstates" minOccurs="0" name="GetSoftDeletedPlottingSchemeImagesResult" nillable="true" type="q50:ArrayOfShowImageDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPlottingSchemesOverView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="languageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllPlottingSchemesOverViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q51="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetAllPlottingSchemesOverViewResult" nillable="true" type="q51:ArrayOfPlotSchemeOverviewDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingSchemeView">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+        <xs:element minOccurs="0" name="languageID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingSchemeViewResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q52="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingSchemeViewResult" nillable="true" type="q52:PlotSchemeOverviewDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPropertyIDOfPlottingScheme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPropertyIDOfPlottingSchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPropertyIDOfPlottingSchemeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotsCountInPlottingScheme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottinnPhaseGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotsCountInPlottingSchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPlotsCountInPlottingSchemeResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListOfPlotsInPlottingPhaseGrop">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottinnPhaseGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListOfPlotsInPlottingPhaseGropResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q53="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetListOfPlotsInPlottingPhaseGropResult" nillable="true" type="q53:ArrayOfIndividualPlotDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListOfPropertyIDsForPlottinSchemeList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q54="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="schemeList" nillable="true" type="q54:ArrayOfPlotSchemeOverviewDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetListOfPropertyIDsForPlottinSchemeListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q55="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetListOfPropertyIDsForPlottinSchemeListResult" nillable="true" type="q55:ArrayOfPlotSchemeOverviewDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchIndividualPlotsByFilter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pageNumber" type="xs:int" />
+        <xs:element xmlns:q56="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="filterCriteria" nillable="true" type="q56:FilterPlotsDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SearchIndividualPlotsByFilterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q57="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="SearchIndividualPlotsByFilterResult" nillable="true" type="q57:ArrayOfUniquePlotDetailsDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndividualPlotDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="individualPlotID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndividualPlotDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q58="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetIndividualPlotDetailsResult" nillable="true" type="q58:IndividualPlotDetailsDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlotOwner">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q59="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plotOwnerDTO" nillable="true" type="q59:PlotOwnerDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlotOwnerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPlotOwnerResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlotOwner">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q60="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plotOwnerDTO" nillable="true" type="q60:PlotOwnerDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlotOwnerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePlotOwnerResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotOwnerDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plotOwnerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotOwnerDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q61="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlotOwnerDetailsResult" nillable="true" type="q61:PlotOwnerDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPaymentDetails">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q62="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="plotPaymentDetailsDTO" nillable="true" type="q62:PlotPaymentDetailsDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPaymentDetailsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPaymentDetailsResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentHistoryOfPlotOwner">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plotOwnerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPaymentHistoryOfPlotOwnerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q63="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPaymentHistoryOfPlotOwnerResult" nillable="true" type="q63:ArrayOfPlotPaymentHistoryDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotsAreaMapDetailsForPlottingPhase">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+        <xs:element minOccurs="0" name="plottingPhaseGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotsAreaMapDetailsForPlottingPhaseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q64="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlotsAreaMapDetailsForPlottingPhaseResult" nillable="true" type="q64:ArrayOfPlotAreaMapDetailsDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOwnerProfilePhoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plotOwnerID" type="xs:int" />
+        <xs:element minOccurs="0" name="profilePhoto" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateOwnerProfilePhotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdateOwnerProfilePhotoResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotOwnerProfilePhoto">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plotOwnerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlotOwnerProfilePhotoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPlotOwnerProfilePhotoResult" nillable="true" type="xs:base64Binary" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndividualPlotByPlotId">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plotId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetIndividualPlotByPlotIdResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q65="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetIndividualPlotByPlotIdResult" nillable="true" type="q65:IndividualPlotDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalPaidAmountForPlotByPlotID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plotId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetTotalPaidAmountForPlotByPlotIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetTotalPaidAmountForPlotByPlotIDResult" type="xs:double" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPropertyIDFromPlottingSchemeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPropertyIDFromPlottingSchemeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPropertyIDFromPlottingSchemeIDResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingStatusHistoryRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q66="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="statusHistoryReportDTO" nillable="true" type="q66:StatusHistoryReportDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddPlottingStatusHistoryRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="AddPlottingStatusHistoryRecordResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingStatusHistoryRecord">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q67="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="statusHistoryReportDTO" nillable="true" type="q67:StatusHistoryReportDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdatePlottingStatusHistoryRecordResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UpdatePlottingStatusHistoryRecordResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingStatusForAllSchemes">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="developerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingStatusForAllSchemesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q68="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingStatusForAllSchemesResult" nillable="true" type="q68:StatusHistoryReportDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingStatusOfScheme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingStatusOfSchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q69="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingStatusOfSchemeResult" nillable="true" type="q69:StatusHistoryReportDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingStatusBySchemeID">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingStatusBySchemeIDResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q70="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingStatusBySchemeIDResult" nillable="true" type="q70:ArrayOfStatusHistoryReportDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeneratePlottingStatusReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="securityCode" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="statusDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GeneratePlottingStatusReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GeneratePlottingStatusReportResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGaugePlottingSchemesReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="developerID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetGaugePlottingSchemesReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q71="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.ViewModels" minOccurs="0" name="GetGaugePlottingSchemesReportResult" nillable="true" type="q71:ArrayOfGaugePlottingSchemesDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingMarketingCostReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="developerID" type="xs:int" />
+        <xs:element xmlns:q72="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="durationInput" nillable="true" type="q72:DurationInputDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingMarketingCostReportResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q73="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingMarketingCostReportResult" nillable="true" type="q73:ArrayOfMarketingCostReportDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingMarketingCostReportByMedia">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="developerID" type="xs:int" />
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingMarketingCostReportByMediaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q74="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingMarketingCostReportByMediaResult" nillable="true" type="q74:ArrayOfMarketingCostReportDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingEnquiriesReportByDuration">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="developerID" type="xs:int" />
+        <xs:element xmlns:q75="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="durationInput" nillable="true" type="q75:DurationInputDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingEnquiriesReportByDurationResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q76="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingEnquiriesReportByDurationResult" nillable="true" type="q76:PlottingEnquiriesReportDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingEnquiriesReportByScheme">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="developerID" type="xs:int" />
+        <xs:element minOccurs="0" name="plottingSchemeID" type="xs:int" />
+        <xs:element minOccurs="0" name="plottingPhaseGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingEnquiriesReportBySchemeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q77="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingEnquiriesReportBySchemeResult" nillable="true" type="q77:PlottingEnquiriesReportDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingMarketingVsEnquiries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="developerID" type="xs:int" />
+        <xs:element xmlns:q78="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="durationInput" nillable="true" type="q78:DurationInputDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPlottingMarketingVsEnquiriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q79="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetPlottingMarketingVsEnquiriesResult" nillable="true" type="q79:MarketingEnquiriesReportDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSoftPlottingPhaseGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingPhaseGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSoftPlottingPhaseGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSoftPlottingPhaseGroupResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePlottingPriceGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingPriceGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeletePlottingPriceGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeletePlottingPriceGroupResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteForcePlottingPhaseGroup">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="plottingPhaseGroupID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteForcePlottingPhaseGroupResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteForcePlottingPhaseGroupResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSoftIndividualPlot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="individualPlotID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteSoftIndividualPlotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteSoftIndividualPlotResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteForceIndividualPlot">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="individualPlotID" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteForceIndividualPlotResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="DeleteForceIndividualPlotResult" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoftDeletedPlottingPhaseGroups">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoftDeletedPlottingPhaseGroupsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q80="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetSoftDeletedPlottingPhaseGroupsResult" nillable="true" type="q80:ArrayOfPlottingSizeGroupDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoftDeletedIndividualPlots">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetSoftDeletedIndividualPlotsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q81="http://schemas.datacontract.org/2004/07/Vilani.BusinessDTOs.Plotters" minOccurs="0" name="GetSoftDeletedIndividualPlotsResult" nillable="true" type="q81:ArrayOfIndividualPlotDTO" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<configuration>
+
+  <connectionStrings>
+    <add name="PlottingEntities" connectionString="metadata=res://Vilani.Repositary/PlottingEntityModel.PlottingModel.csdl|res://Vilani.Repositary/PlottingEntityModel.PlottingModel.ssdl|res://Vilani.Repositary/PlottingEntityModel.PlottingModel.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot;server=192.168.2.20;User Id=vilani;password=password;Persist Security Info=True;database=vilanimartdev&quot;" providerName="System.Data.EntityClient"/>
+    <add name="VilaniMartConnection" connectionString="metadata=res://Vilani.Repositary/RealEstateEntityModel.RealEstateModel.csdl|res://Vilani.Repositary/RealEstateEntityModel.RealEstateModel.ssdl|res://Vilani.Repositary/RealEstateEntityModel.RealEstateModel.msl;provider=MySql.Data.MySqlClient;provider connection string=&quot;server=192.168.2.20;User Id=vilani;password=password;Persist Security Info=True;database=vilanimartdev&quot;" providerName="System.Data.EntityClient"/>
+  </connectionStrings>
+  
+    <system.serviceModel>
+        <bindings>
+            <basicHttpBinding>
+                <binding name="BasicHttpBinding_IVilaniTranslatorServices" />
+            </basicHttpBinding>
+        </bindings>
+        <client>
+            <endpoint address="http://localhost:3115/VilaniTranslatorServices.svc"
+                binding="basicHttpBinding" bindingConfiguration="BasicHttpBinding_IVilaniTranslatorServices"
+                contract="VilaniTranslatorServices.IVilaniTranslatorServices"
+                name="BasicHttpBinding_IVilaniTranslatorServices" />
+        </client>
+    </system.serviceModel>
+<startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.5"/></startup></configuration>
