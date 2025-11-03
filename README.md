@@ -7,7 +7,7 @@ It proactively runs translation jobs at scheduled intervals, ensuring that multi
 
 ## 🧠 Overview
 
-The service is part of the **Vilani Platform**, which powers real estate listings and property management portals.  
+The service is part of the **Vilani Platform**, which powers real estate property management portals.  
 It integrates with the **Vilani Language Translation Layer**, continuously monitoring domain tables for untranslated or missing localized content, and automatically updating them via the internal **Vilani Translator Services API**.
 
 This automation removes the need for manual translation maintenance, reducing operational overhead and ensuring accurate multilingual data presentation across all builder and project websites.
